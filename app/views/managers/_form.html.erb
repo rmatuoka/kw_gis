@@ -1,0 +1,68 @@
+<%= form_for @manager do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :nickname %><br />
+    <%= f.text_field :nickname %>
+  </p>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :rg %><br />
+    <%= f.text_field :rg %>
+  </p>
+  <p>
+    <%= f.label :cpf %><br />
+    <%= f.text_field :cpf %>
+  </p>
+  <p>
+    <%= f.label :phone1 %><br />
+    <%= f.text_field :phone1 %>
+  </p>
+  <p>
+    <%= f.label :phone2 %><br />
+    <%= f.text_field :phone2 %>
+  </p>
+  <p>
+    <%= f.label :cellphone %><br />
+    <%= f.text_field :cellphone %>
+  </p>
+  <p>
+    <%= f.label :street %><br />
+    <%= f.text_field :street %>
+  </p>
+  <p>
+    <%= f.label :number %><br />
+    <%= f.text_field :number %>
+  </p>
+  <p>
+    <%= f.label :complement %><br />
+    <%= f.text_field :complement %>
+  </p>
+  <p>
+    <%= f.label :neibourhood %><br />
+    <%= f.text_field :neibourhood %>
+  </p>
+  <p>
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </p>
+  <p>
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </p>
+  <p>
+    <%= f.label :ae %><br />
+    <%= f.text_field :ae %>
+  </p>
+	<p>
+    <%= f.label :obs %><br />
+    <%= f.text_area :obs %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

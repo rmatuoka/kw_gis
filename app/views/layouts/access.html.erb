@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>1º Encontro de Gestores da Informação</title>
+  <%= stylesheet_link_tag "template" %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+<div id="TopBar"></div>
+<div id="LogoAccess"><%=image_tag("logo_access.png")%></div>
+<%= yield %>
+<%=render :file => "layouts/_footer.html.erb"%>
+</body>
+</html>

@@ -1,0 +1,193 @@
+img
+{
+	border:none;
+}
+*
+{
+	margin:0px;
+	padding:0px;
+}
+
+body
+{
+	background-image:url('/images/bg_all.jpg');
+	background-position:top center;
+	background-repeat:no-repeat;
+	text-align:center;
+}
+
+
+
+#TopBar
+{
+	width:100%;
+	background-image:url('/images/amarelo_cima.jpg');
+	background-position:top center;
+	background-repeat:no-repeat;
+	height:25px;
+}
+
+#BotBar
+{
+	width:100%;
+	background-image:url('/images/amarelo_baixo.jpg');
+	background-position:top center;
+	background-repeat:no-repeat;
+	height:29px;
+}
+
+#Footer
+{
+
+}
+
+#Sato7
+{
+	text-align:left;
+	width:960px;
+	margin:auto;
+}
+#General
+{
+	width:960px;
+	margin:auto;
+	text-align:left;
+}
+	
+	#General #Logo
+	{
+		float:left;
+	}
+	
+	#General #Counter
+	{
+		margin-top:-1px;
+		float:right;
+		width:471px;
+		height:238px;
+		background-image:url('/images/bg_counter.png');
+		background-repeat:no-repeat;
+	}
+	
+	#General #Content
+	{
+		
+	}
+	
+		#General #Content #MainBox
+		{
+			width:960px;
+			min-height:483px;
+			height:auto;
+			background-image:url('/images/bg_content_home.png');
+			background-repeat:no-repeat;
+		}
+		
+			#General #Content #MainBox #Salute
+			{
+				padding:27px 27px 27px 40px;
+				width:381px;
+				font-family:Tahoma;
+				font-size:18px;
+				font-weight:bold;
+				color:#000000;
+				text-transform:uppercase;
+			}
+		
+			#General #Content #MainBox #Box
+			{
+				margin-top:30px;
+				width:381px;
+				min-height:350px;
+				height:auto;
+				font-family:Tahoma;
+				font-size:14px;
+				color:#627273;
+				text-transform:uppercase;
+			}
+			
+			#General #Content #MainBox .Passagem
+			{
+				margin-left:80px;
+				float:left;
+			}
+			
+			#General #Content #MainBox .Hospedagem
+			{
+				margin-right:80px;
+				float:right;
+			}
+			
+			#General #Content #MainBox #Box label
+			{
+				color:#00f5ff !important;
+			}
+			
+			
+	
+/*--------------LOGIN*/
+#LogoAccess
+{
+	margin-top:50px;
+}
+
+#Tube
+{
+	margin-top:0px;
+	width:100%;
+	background-image:url('/images/tube.jpg');
+	background-position:top center;
+	background-repeat:no-repeat;
+	height:377px;
+	text-align:center;
+}
+
+	#Tube #Warning
+	{
+		position:absolute;
+		left:50%;
+		margin-left:-310px;
+		width:620px;
+		border:1px solid red;
+		font-family:Tahoma;
+		background-color: #FCC;
+		border: solid 1px #C66;
+		padding:10px;
+		color:Red;
+	}
+
+	#Tube #TubeContent
+	{
+		width:500px;
+		margin:auto;
+		text-align:left;
+	}
+	
+		#Tube #TubeContent #AccessCode input
+		{
+			width:450px;
+			height:65px;
+			margin-top:154px;
+			margin-left:20px;
+			text-align:left;
+			font-family:Tahoma;
+			font-size:42px;
+			color:#15dce2;
+			border:none;
+			background:transparent;
+		}
+	
+		#Tube #TubeContent #Access
+		{
+			margin-top:80px;
+			margin-left:97px;
+		}
+
+.dezoito
+{
+	font-size:18px !important;
+}
+.clear
+{
+	clear:both;
+}

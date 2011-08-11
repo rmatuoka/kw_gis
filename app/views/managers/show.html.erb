@@ -1,0 +1,72 @@
+<% title "Manager" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @manager.name %>
+</p>
+<p>
+  <strong>Nickname:</strong>
+  <%= @manager.nickname %>
+</p>
+<p>
+  <strong>Email:</strong>
+  <%= @manager.email %>
+</p>
+<p>
+  <strong>Rg:</strong>
+  <%= @manager.rg %>
+</p>
+<p>
+  <strong>Cpf:</strong>
+  <%= @manager.cpf %>
+</p>
+<p>
+  <strong>Phone1:</strong>
+  <%= @manager.phone1 %>
+</p>
+<p>
+  <strong>Phone2:</strong>
+  <%= @manager.phone2 %>
+</p>
+<p>
+  <strong>Cellphone:</strong>
+  <%= @manager.cellphone %>
+</p>
+<p>
+  <strong>Street:</strong>
+  <%= @manager.street %>
+</p>
+<p>
+  <strong>Number:</strong>
+  <%= @manager.number %>
+</p>
+<p>
+  <strong>Complement:</strong>
+  <%= @manager.complement %>
+</p>
+<p>
+  <strong>Neibourhood:</strong>
+  <%= @manager.neibourhood %>
+</p>
+<p>
+  <strong>City:</strong>
+  <%= @manager.city %>
+</p>
+<p>
+  <strong>State:</strong>
+  <%= @manager.state %>
+</p>
+<p>
+  <strong>Ae:</strong>
+  <%= @manager.ae %>
+</p>
+<p>
+  <strong>Obs:</strong>
+  <%= @manager.obs %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_manager_path(@manager) %> |
+  <%= link_to "Destroy", @manager, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", managers_path %>
+</p>

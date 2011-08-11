@@ -1,0 +1,18 @@
+<% title "Tickets" %>
+
+<table>
+  <tr>
+    <th>Voo</th>
+  </tr>
+  <% for ticket in @tickets %>
+    <tr>
+      <td><%= ticket.voo %></td>
+      <td><%= link_to "Show", manager_ticket_path(@manager, ticket) %></td>
+      <td><%= link_to "Edit", edit_manager_ticket_path(@manager, ticket) %></td>
+      <td><%= link_to "Destroy", manager_ticket_path(@manager, ticket), :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+<%if @tickets.count < 1%>
+<p><%= link_to "New Ticket", new_manager_ticket_path %></p>
+<%end%>

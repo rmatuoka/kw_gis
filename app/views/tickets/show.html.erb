@@ -1,0 +1,12 @@
+<% title "Ticket" %>
+
+<p>
+  <strong>Voo:</strong>
+  <%= @ticket.voo %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_manager_ticket_path(@manager, @ticket) %> |
+  <%= link_to "Destroy", @ticket, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", manager_tickets_path(@manager) %>
+</p>

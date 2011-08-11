@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>1º Encontro de Gestores da Informação</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+<div id="TopBar"></div>
+<div id="General">
+	<div id="Logo">
+		<%=image_tag("logo_internas.png")%>
+	</div>
+	<div id="Counter">
+		<div id="DateTimer">
+			<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="471" height="238" id="Counter" align="middle">
+								<param name="allowScriptAccess" value="sameDomain" />
+								<param name="allowFullScreen" value="false" />
+								<param name="movie" value="/contador.swf" />
+								<param name="quality" value="high" />
+								<param name="wmode" value="transparent" />
+								<embed wmode="transparent" src="contador.swf" quality="high"  width="471" height="238" name="Counter" align="middle" allowScriptAccess="sameDomain" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+							</object>
+		</div>
+	</div>
+	
+	<div class="clear">
+		
+	</div>
+	<div id="Content">
+		<%= yield %>
+	</div>
+</div>
+
+<%=render :file => "layouts/_footer.html.erb"%>
+
+</body>
+</html>

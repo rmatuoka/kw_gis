@@ -1,0 +1,35 @@
+one:
+  name: MyString
+  nickname: MyString
+  email: MyString
+  rg: MyString
+  cpf: MyString
+  phone1: MyString
+  phone2: MyString
+  cellphone: MyString
+  street: MyString
+  number: MyString
+  complement: MyString
+  neibourhood: MyString
+  city: MyString
+  state: MyString
+  ae: MyString
+  obs: MyText
+
+two:
+  name: MyString
+  nickname: MyString
+  email: MyString
+  rg: MyString
+  cpf: MyString
+  phone1: MyString
+  phone2: MyString
+  cellphone: MyString
+  street: MyString
+  number: MyString
+  complement: MyString
+  neibourhood: MyString
+  city: MyString
+  state: MyString
+  ae: MyString
+  obs: MyText

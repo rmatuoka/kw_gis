@@ -1,0 +1,35 @@
+<% title "Managers" %>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Apelido</th>
+    <th>E-mail</th>
+    <th>Tel 1</th>
+    <th>Tel 2.</th>
+    <th>Celular</th>
+    <th>Cidade</th>
+    <th>Estado</th>
+    <th>AE</th>
+	<th colspan="4">Ações</th>
+  </tr>
+  <% for manager in @managers %>
+    <tr>
+      <td><%= manager.name %></td>
+      <td><%= manager.nickname %></td>
+      <td><%= manager.email %></td>
+      <td><%= manager.phone1 %></td>
+      <td><%= manager.phone2 %></td>
+      <td><%= manager.cellphone %></td>
+      <td><%= manager.city %></td>
+      <td><%= manager.state %></td>
+      <td><%= manager.ae %></td>
+	  <td><%= link_to "Passagem", manager_tickets_path(manager) %></td>
+      <td><%= link_to "Ver", manager %></td>
+      <td><%= link_to "Editar", edit_manager_path(manager) %></td>
+      <td><%= link_to "Deletar", manager, :confirm => 'Tem certeza?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "+ Adicionar", new_manager_path %></p>
