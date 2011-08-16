@@ -1,5 +1,6 @@
 class Manager < ActiveRecord::Base
   has_many :ticket
+  has_many :hostings
   #PAPERCLIP
   #has_attached_file :passagem
   

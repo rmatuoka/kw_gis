@@ -1,0 +1,20 @@
+<% title "Hostings" %>
+
+<table>
+  <tr>
+    <th>Manager</th>
+    <th>Bedroom</th>
+  </tr>
+  <% for hosting in @hostings %>
+    <tr>
+      <td><%= @manager.name %></td>
+      <td><%= hosting.bedroom %></td>
+      <td><%= link_to "Show", manager_hosting_path(@manager, hosting) %></td>
+      <td><%= link_to "Edit", edit_manager_hosting_path(@manager, hosting) %></td>
+      <td><%= link_to "Destroy", manager_hosting_path(@manager, hosting), :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+<%if @hostings.count < 1%>
+<p><%= link_to "New Hosting", new_manager_hosting_path(@manager) %></p>
+<%end%>

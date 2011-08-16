@@ -1,0 +1,7 @@
+one:
+  manager_id: 1
+  bedroom: MyString
+
+two:
+  manager_id: 1
+  bedroom: MyString

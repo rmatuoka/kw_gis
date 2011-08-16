@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
   
   def check_access_code
     if !session[:access_code]
-      flash[:msg] = "Sua sessão expirou!"
+      flash[:msg] = "Digite o código de acesso para entrar."
       redirect_to access_path 
     else
       @manager = Manager.find_by_access_code(session[:access_code])

@@ -1,0 +1,16 @@
+<% title "Hosting" %>
+
+<p>
+  <strong>Manager:</strong>
+  <%= @hosting.manager_id %>
+</p>
+<p>
+  <strong>Bedroom:</strong>
+  <%= @hosting.bedroom %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_manager_hosting_path(@manager, @hosting) %> |
+  <%= link_to "Destroy", manager_hosting_path(@manager, @hosting), :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", manager_hostings_path(@manager) %>
+</p>

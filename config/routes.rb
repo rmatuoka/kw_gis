@@ -1,10 +1,13 @@
 KwGis::Application.routes.draw do |map|
+  resources :hostings
+
   resources :tickets
 
   resources :user_sessions
   resources :users
   resources(:managers){
     resources :tickets
+    resources :hostings
   }
   resources :home
   resources :access

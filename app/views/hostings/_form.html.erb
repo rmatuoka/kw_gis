@@ -1,0 +1,8 @@
+<%= form_for ([@manager, @hosting]) do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :bedroom %><br />
+    <%= f.text_field :bedroom %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

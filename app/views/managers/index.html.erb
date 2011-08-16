@@ -25,6 +25,7 @@
       <td><%= manager.state %></td>
       <td><%= manager.ae %></td>
 	  <td><%= link_to "Passagem", manager_tickets_path(manager) %></td>
+	  <td><%= link_to "Hospedagem", manager_hostings_path(manager) %></td>
       <td><%= link_to "Ver", manager %></td>
       <td><%= link_to "Editar", edit_manager_path(manager) %></td>
       <td><%= link_to "Deletar", manager, :confirm => 'Tem certeza?', :method => :delete %></td>

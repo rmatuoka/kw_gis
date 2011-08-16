@@ -10,7 +10,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110810170033) do
+ActiveRecord::Schema.define(:version => 20110812183007) do
+
+  create_table "hostings", :force => true do |t|
+    t.integer  "manager_id"
+    t.string   "bedroom"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "managers", :force => true do |t|
     t.string   "name"
