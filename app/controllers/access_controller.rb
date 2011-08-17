@@ -11,7 +11,7 @@ class AccessController < ApplicationController
       redirect_to home_index_path
     else
       session[:access_code] = nil
-      flash[:msg] = "Código de acesso inválido!"
+      flash[:msg] = "Código de acesso inválido! Caso não tenha recebido seu código, entre em contato com nosso suporte <a href='mailto:suporte@gestoresdeinformacao.com.br'>suporte@gestoresdeinformacao.com.br</a>"
       redirect_to access_path
     end
   end

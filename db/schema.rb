@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110812183007) do
+ActiveRecord::Schema.define(:version => 20110817212847) do
 
   create_table "hostings", :force => true do |t|
     t.integer  "manager_id"
@@ -47,6 +47,27 @@ ActiveRecord::Schema.define(:version => 20110812183007) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "manager_id"
+    t.string   "cidade"
+    t.date     "ida_data"
+    t.string   "ida_cidade"
+    t.string   "ida_origem"
+    t.string   "ida_destino"
+    t.string   "ida_voo"
+    t.time     "ida_horario_saida"
+    t.time     "ida_horario_chegada"
+    t.date     "vinda_data"
+    t.string   "vinda_origem"
+    t.string   "vinda_destino"
+    t.string   "vinda_voo"
+    t.time     "vinda_horario_saida"
+    t.time     "vinda_horario_chegada"
+    t.string   "codigo_reserva"
+    t.string   "e_ticket"
+    t.text     "obs"
+    t.string   "passagem_file_name"
+    t.string   "passagem_content_type"
+    t.integer  "passagem_file_size"
+    t.datetime "passagem_updated_at"
   end
 
   create_table "users", :force => true do |t|

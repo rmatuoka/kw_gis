@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
   
   def check_access_code
     if !session[:access_code]
-      flash[:msg] = "Digite o código de acesso para entrar."
+      flash[:msg] = "Digite o código de acesso para entrar. Caso não tenha recebido seu código, entre em contato com nosso suporte <a href='mailto:suporte@gestoresdeinformacao.com.br'>suporte@gestoresdeinformacao.com.br</a>"
       redirect_to access_path 
     else
       @manager = Manager.find_by_access_code(session[:access_code])

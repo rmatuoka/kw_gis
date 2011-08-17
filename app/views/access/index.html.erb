@@ -3,7 +3,7 @@
 	
 	<%if flash[:msg]%>
 		<div id="Warning">
-			<%=flash[:msg]%>
+			<%=raw(flash[:msg])%>
 		</div>
 	<%end%>
 	<div id="TubeContent">

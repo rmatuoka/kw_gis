@@ -1,8 +1,81 @@
-<%= form_for ([@manager, @ticket]) do |f| %>
+<%= form_for ([@manager, @ticket], :html => { :multipart => :true }) do |f| %>
   <%= f.error_messages %>
   <p>
-    <%= f.label :voo %><br />
-    <%= f.text_field :voo %>
+    Cidade<br />
+    <%= f.text_field :cidade %>
   </p>
+
+<h2>Dados - Ida</h2>
+<p>
+   Data<br />
+    <%= f.date_select :ida_data %>
+  </p>
+
+<p>
+    Origem<br />
+    <%= f.text_field :ida_origem %>
+  </p>
+<p>
+    Destino<br />
+    <%= f.text_field :ida_destino %>
+  </p>
+<p>
+    Voo<br />
+    <%= f.text_field :ida_voo %>
+  </p>
+<p>
+    Horário Saída<br />
+    <%= f.time_select :ida_horario_saida %>
+  </p>
+<p>
+    Horário Chegada<br />
+    <%= f.time_select :ida_horario_chegada %>
+  </p>
+
+<h2>Dados - Volta</h2>
+<p>
+    Data<br />
+    <%= f.date_select :vinda_data %>
+  </p>
+<p>
+    Origem<br />
+    <%= f.text_field :vinda_origem %>
+  </p>
+<p>
+    Destino<br />
+    <%= f.text_field :vinda_destino %>
+  </p>
+<p>
+    Voo<br />
+    <%= f.text_field :vinda_voo %>
+  </p>
+<p>
+    Horário Saída<br />
+    <%= f.time_select :vinda_horario_saida %>
+  </p>
+<p>
+    Horário Chegada<br />
+    <%= f.time_select :vinda_horario_chegada %>
+  </p>
+
+<h2>Dados - Passagem</h2>
+<p>
+    Código da Reserva<br />
+    <%= f.text_field :codigo_reserva %>
+  </p>
+<p>
+    E-Ticket<br />
+    <%= f.text_field :e_ticket %>
+  </p>
+<p>
+    <%= f.label :obs %><br />
+    <%= f.text_area :obs %>
+  </p>
+<p>
+    Upload da passagem<br />
+    <%= f.file_field :passagem %>
+  </p>
+
+
   <p><%= f.submit %></p>
 <% end %>
