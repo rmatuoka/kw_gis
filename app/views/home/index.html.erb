@@ -10,9 +10,9 @@
 		 <br />
 		<label>Voo:</label><%=@manager.tickets.first.ida_voo%><br />
 		 <br />
-		<label>DE:</label> <%=@manager.tickets.first.ida_origem%> <%=@manager.tickets.first.ida_data%> / <%=@manager.tickets.first.ida_horario_saida%> <br />
+		<label>DE:</label> <%=@manager.tickets.first.ida_origem%> <%=@manager.tickets.first.ida_data.strftime("%d/%m/%Y")%> / <%=@manager.tickets.first.ida_horario_saida.strftime("%H:%M")%> <br />
 		 <br />
-		<label>PARA:</label> <%=@manager.tickets.first.ida_destino%> <%=@manager.tickets.first.ida_data%> / <%=@manager.tickets.first.ida_horario_chegada%> <br />
+		<label>PARA:</label> <%=@manager.tickets.first.ida_destino%> <%=@manager.tickets.first.ida_data.strftime("%d/%m/%Y")%> / <%=@manager.tickets.first.ida_horario_chegada.strftime("%H:%M")%> <br />
 		 <br />
 		<br />
 		
@@ -20,9 +20,9 @@
 		<br />
 		<label>Voo:</label><%=@manager.tickets.first.vinda_voo%><br />
 		 <br />
-		<label>DE:</label> <%=@manager.tickets.first.vinda_origem%> <%=@manager.tickets.first.vinda_data%> / <%=@manager.tickets.first.vinda_horario_saida%> <br />
+		<label>DE:</label> <%=@manager.tickets.first.vinda_origem%> <%=@manager.tickets.first.vinda_data.strftime("%d/%m/%Y")%> / <%=@manager.tickets.first.vinda_horario_saida.strftime("%H:%M")%> <br />
 		 <br />
-		<label>PARA:</label> <%=@manager.tickets.first.vinda_destino%> <%=@manager.tickets.first.vinda_data%> / <%=@manager.tickets.first.vinda_horario_chegada%> <br />
+		<label>PARA:</label> <%=@manager.tickets.first.vinda_destino%> <%=@manager.tickets.first.vinda_data.strftime("%d/%m/%Y")%> / <%=@manager.tickets.first.vinda_horario_chegada.strftime("%H:%M")%> <br />
 		 <br />
 		<label>Cód. de Reserva: </label> <%=@manager.tickets.first.codigo_reserva%> / <label>E-Ticket: </label> <%=@manager.tickets.first.e_ticket%><br />
 
