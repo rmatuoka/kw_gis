@@ -6,9 +6,9 @@
 	<div id="Box" class="Passagem">
 		<h1><%=image_tag("tit_passagem.gif")%></h1>
 		<%if @manager.tickets.first%>
-			<%if !@manager.obs.blank?%>
+			<%if !@manager.warning.blank?%>
 				<div id="Warning">
-					<%=@manager.obs%>
+					<%=@manager.warning%>
 				</div>
 			<%end%>
 			
