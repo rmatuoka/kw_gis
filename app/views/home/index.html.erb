@@ -6,19 +6,28 @@
 	<div id="Box" class="Passagem">
 		<h1><%=image_tag("tit_passagem.gif")%></h1>
 		
-		<label>Vôo:</label> aa0000 <br />
+		<label><strong>Ida:</strong></label><br />
 		 <br />
-		<label>ASSENTO:</label> 1a <br />
+		<label>Voo:</label><%=@manager.tickets.first.ida_voo%><br />
 		 <br />
-		<label>DE:</label> SÃO Paulo 07 Apr 2011 / 00:00 <br />
+		<label>DE:</label> <%=@manager.tickets.first.ida_origem%> <%=@manager.tickets.first.ida_data%> / <%=@manager.tickets.first.ida_horario_saida%> <br />
 		 <br />
-		<label>PARA:</label> SÃO PAULO 07 Apr 2011 / 00:00 <br />
+		<label>PARA:</label> <%=@manager.tickets.first.ida_destino%> <%=@manager.tickets.first.ida_data%> / <%=@manager.tickets.first.ida_horario_chegada%> <br />
 		 <br />
-		<label>Portão:</label> Confirmar no aeroporto <br />
+		<br />
+		
+		<label><strong>Volta:</strong></label><br />
+		<br />
+		<label>Voo:</label><%=@manager.tickets.first.vinda_voo%><br />
 		 <br />
-		<span class="dezoito"><label>EMBARQUE:</label> 22:30 </span> <br />
+		<label>DE:</label> <%=@manager.tickets.first.vinda_origem%> <%=@manager.tickets.first.vinda_data%> / <%=@manager.tickets.first.vinda_horario_saida%> <br />
 		 <br />
-		<span><%=image_tag("bt_print.gif")%></span>
+		<label>PARA:</label> <%=@manager.tickets.first.vinda_destino%> <%=@manager.tickets.first.vinda_data%> / <%=@manager.tickets.first.vinda_horario_chegada%> <br />
+		 <br />
+		<label>Cód. de Reserva: </label> <%=@manager.tickets.first.codigo_reserva%> / <label>E-Ticket: </label> <%=@manager.tickets.first.e_ticket%><br />
+
+		 <br />
+		<span><%=link_to(image_tag("bt_print.gif"), print_home_index_path, :target => "_blank")%></span>
 	</div>
 	
 	<div id="Box" class="Hospedagem">

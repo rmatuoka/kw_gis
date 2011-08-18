@@ -9,7 +9,11 @@ KwGis::Application.routes.draw do |map|
     resources :tickets
     resources :hostings
   }
-  resources :home
+  resources(:home){
+    collection do
+      get 'print'
+    end
+  }
   resources :access
   
   root :to => "access#index"

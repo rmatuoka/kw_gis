@@ -11,6 +11,7 @@
     <th>Cidade</th>
     <th>Estado</th>
     <th>AE</th>
+	<th>Cod.</th>
 	<th colspan="4">Ações</th>
   </tr>
   <% for manager in @managers %>
@@ -24,6 +25,7 @@
       <td><%= manager.city %></td>
       <td><%= manager.state %></td>
       <td><%= manager.ae %></td>
+	  <td><%= manager.access %></td>
 	  <td><%= link_to "Passagem", manager_tickets_path(manager) %></td>
 	  <td><%= link_to "Hospedagem", manager_hostings_path(manager) %></td>
       <td><%= link_to "Ver", manager %></td>

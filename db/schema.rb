@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110817212847) do
+ActiveRecord::Schema.define(:version => 20110818000915) do
 
   create_table "hostings", :force => true do |t|
     t.integer  "manager_id"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(:version => 20110817212847) do
     t.datetime "updated_at"
     t.string   "access"
     t.integer  "number_of_access", :default => 0
+    t.integer  "print"
   end
 
   create_table "tickets", :force => true do |t|

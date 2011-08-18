@@ -1,5 +1,5 @@
 class Manager < ActiveRecord::Base
-  has_many :ticket
+  has_many :tickets
   has_many :hostings
   
   

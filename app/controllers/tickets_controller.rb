@@ -2,19 +2,19 @@ class TicketsController < ApplicationController
   before_filter :load_manager
   layout "admin"
   def index
-    @tickets = @manager.ticket.all
+    @tickets = @manager.tickets.all
   end
 
   def show
-    @ticket = @manager.ticket.find(params[:id])
+    @ticket = @manager.tickets.find(params[:id])
   end
 
   def new
-    @ticket = @manager.ticket.build
+    @ticket = @manager.tickets.build
   end
 
   def create
-    @ticket = @manager.ticket.new(params[:ticket])
+    @ticket = @manager.tickets.new(params[:ticket])
     if @ticket.save
       redirect_to manager_ticket_path(@manager, @ticket), :notice => "Successfully created ticket."
     else
@@ -23,11 +23,11 @@ class TicketsController < ApplicationController
   end
 
   def edit
-    @ticket = @manager.ticket.find(params[:id])
+    @ticket = @manager.tickets.find(params[:id])
   end
 
   def update
-    @ticket = @manager.ticket.find(params[:id])
+    @ticket = @manager.tickets.find(params[:id])
     if @ticket.update_attributes(params[:ticket])
       redirect_to manager_ticket_path(@manager, @ticket), :notice  => "Successfully updated ticket."
     else
@@ -36,7 +36,7 @@ class TicketsController < ApplicationController
   end
 
   def destroy
-    @ticket = @manager.ticket.find(params[:id])
+    @ticket = @manager.tickets.find(params[:id])
     @ticket.destroy
     redirect_to manager_tickets_path(@manager), :notice => "Successfully destroyed ticket."
   end
