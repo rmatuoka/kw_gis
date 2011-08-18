@@ -1,8 +1,68 @@
 <% title "Ticket" %>
 
 <p>
+  <strong>Gestor:</strong>
+  <%= @ticket.manager.name %>
+</p>
+<p>
+  <strong>Cidade:</strong>
+  <%= @ticket.cidade %>
+</p>
+<p>
+  <strong>Data de Ida:</strong>
+  <%= @ticket.ida_data %>
+</p>
+<p>
+  <strong>Origem:</strong>
+  <%= @ticket.ida_origem %>
+</p>
+<p>
+  <strong>Destino:</strong>
+  <%= @ticket.ida_destino %>
+</p>
+<p>
   <strong>Voo:</strong>
-  <%= @ticket.voo %>
+  <%= @ticket.ida_voo %>
+</p>
+<p>
+  <strong>Horario de Saída:</strong>
+  <%= @ticket.ida_horario_saida %>
+</p>
+<p>
+  <strong>Horário de Chegada:</strong>
+  <%= @ticket.ida_horario_chegada %>
+</p>
+<p>
+  <strong>Data de Volta:</strong>
+  <%= @ticket.vinda_data %>
+</p>
+<p>
+  <strong>Origem:</strong>
+  <%= @ticket.vinda_origem %>
+</p>
+<p>
+  <strong>Destino:</strong>
+  <%= @ticket.vinda_destino %>
+</p>
+<p>
+  <strong>Voo:</strong>
+  <%= @ticket.vinda_voo %>
+</p>
+<p>
+  <strong>Horário de Saída:</strong>
+  <%= @ticket.vinda_horario_saida %>
+</p>
+<p>
+  <strong>Horário de Chegada:</strong>
+  <%= @ticket.vinda_horario_chegada %>
+</p>
+<p>
+  <strong>Cód. de Reserva:</strong>
+  <%= @ticket.codigo_reserva %>
+</p>
+<p>
+  <strong>E-Ticket:</strong>
+  <%= @ticket.e_ticket %>
 </p>
 
 <p>
