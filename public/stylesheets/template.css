@@ -85,7 +85,7 @@ body
 		
 			#General #Content #MainBox #Salute
 			{
-				padding:27px 27px 27px 40px;
+				padding:27px 27px 15px 40px;
 				width:381px;
 				font-family:Tahoma;
 				font-size:18px;
@@ -121,6 +121,16 @@ body
 			#General #Content #MainBox #Box label
 			{
 				color:#00f5ff !important;
+			}
+			
+			#General #Content #MainBox #Box #Warning
+			{
+				border:1px solid red;
+				font-family:Tahoma;
+				background-color: #FCC;
+				border: solid 1px #C66;
+				padding:10px;
+				color:Red;
 			}
 			
 			

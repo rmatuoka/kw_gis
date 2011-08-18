@@ -5,29 +5,38 @@
 	
 	<div id="Box" class="Passagem">
 		<h1><%=image_tag("tit_passagem.gif")%></h1>
+		<%if @manager.tickets.first%>
+			<%if !@manager.obs.blank?%>
+				<div id="Warning">
+					<%=@manager.obs%>
+				</div>
+			<%end%>
+			
+			<label><strong>Ida:</strong></label><br />
+			 <br />
+			<label>Voo:</label><%=@manager.tickets.first.ida_voo%><br />
+			 <br />
+			<label>DE:</label> <%=@manager.tickets.first.ida_origem%> <%=@manager.tickets.first.ida_data.strftime("%d/%m/%Y")%> / <%=@manager.tickets.first.ida_horario_saida.strftime("%H:%M")%> <br />
+			 <br />
+			<label>PARA:</label> <%=@manager.tickets.first.ida_destino%> <%=@manager.tickets.first.ida_data.strftime("%d/%m/%Y")%> / <%=@manager.tickets.first.ida_horario_chegada.strftime("%H:%M")%> <br />
+			 <br />
+			<br />
 		
-		<label><strong>Ida:</strong></label><br />
-		 <br />
-		<label>Voo:</label><%=@manager.tickets.first.ida_voo%><br />
-		 <br />
-		<label>DE:</label> <%=@manager.tickets.first.ida_origem%> <%=@manager.tickets.first.ida_data.strftime("%d/%m/%Y")%> / <%=@manager.tickets.first.ida_horario_saida.strftime("%H:%M")%> <br />
-		 <br />
-		<label>PARA:</label> <%=@manager.tickets.first.ida_destino%> <%=@manager.tickets.first.ida_data.strftime("%d/%m/%Y")%> / <%=@manager.tickets.first.ida_horario_chegada.strftime("%H:%M")%> <br />
-		 <br />
-		<br />
-		
-		<label><strong>Volta:</strong></label><br />
-		<br />
-		<label>Voo:</label><%=@manager.tickets.first.vinda_voo%><br />
-		 <br />
-		<label>DE:</label> <%=@manager.tickets.first.vinda_origem%> <%=@manager.tickets.first.vinda_data.strftime("%d/%m/%Y")%> / <%=@manager.tickets.first.vinda_horario_saida.strftime("%H:%M")%> <br />
-		 <br />
-		<label>PARA:</label> <%=@manager.tickets.first.vinda_destino%> <%=@manager.tickets.first.vinda_data.strftime("%d/%m/%Y")%> / <%=@manager.tickets.first.vinda_horario_chegada.strftime("%H:%M")%> <br />
-		 <br />
-		<label>Cód. de Reserva: </label> <%=@manager.tickets.first.codigo_reserva%> / <label>E-Ticket: </label> <%=@manager.tickets.first.e_ticket%><br />
+			<label><strong>Volta:</strong></label><br />
+			<br />
+			<label>Voo:</label><%=@manager.tickets.first.vinda_voo%><br />
+			 <br />
+			<label>DE:</label> <%=@manager.tickets.first.vinda_origem%> <%=@manager.tickets.first.vinda_data.strftime("%d/%m/%Y")%> / <%=@manager.tickets.first.vinda_horario_saida.strftime("%H:%M")%> <br />
+			 <br />
+			<label>PARA:</label> <%=@manager.tickets.first.vinda_destino%> <%=@manager.tickets.first.vinda_data.strftime("%d/%m/%Y")%> / <%=@manager.tickets.first.vinda_horario_chegada.strftime("%H:%M")%> <br />
+			 <br />
+			<label>Cód. de Reserva: </label> <%=@manager.tickets.first.codigo_reserva%> / <label>E-Ticket: </label> <%=@manager.tickets.first.e_ticket%><br />
 
-		 <br />
-		<span><%=link_to(image_tag("bt_print.gif"), print_home_index_path, :target => "_blank")%></span>
+			 <br />
+			<span><%=link_to(image_tag("bt_print.gif"), print_home_index_path, :target => "_blank") if !@manager.tickets.first.passagem.blank?%></span>
+	
+			
+		<%end%>
 	</div>
 	
 	<div id="Box" class="Hospedagem">
