@@ -3,12 +3,12 @@
 <% form_for @user_session do |f| %>
   <%= f.error_messages %>
   <p>
-    <%= f.label :username %><br />
-    <%= f.text_field :username %>
+    Nome do usuário<br />
+    <%= f.text_field :username, :class => "FormAdm" %>
   </p>
   <p>
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
+    Senha<br />
+    <%= f.password_field :password, :class => "FormAdm" %>
   </p>
   <p><%= f.submit "Enviar" %></p>
 <% end %>

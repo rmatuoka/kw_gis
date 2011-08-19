@@ -1,0 +1,21 @@
+<% title "Relatório" %>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>E-mail</th>
+    <th>AE</th>
+	<th>Nº. de Acessos</th>
+	<th>Nº. de Impressões</th>
+  </tr>
+  <% for manager in @managers %>
+    <tr>
+      <td><%= manager.name %></td>
+      <td><%= manager.email %></td>
+      <td><%= manager.ae %></td>
+	  <td><%= manager.number_of_access %></td>
+      <td><%= manager.print %></td>
+	 
+    </tr>
+  <% end %>
+</table>

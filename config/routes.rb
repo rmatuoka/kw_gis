@@ -2,7 +2,7 @@ KwGis::Application.routes.draw do |map|
   resources :hostings
 
   resources :tickets
-
+  resources :reports
   resources :user_sessions
   resources :users
   resources(:managers){
