@@ -15,6 +15,8 @@ KwGis::Application.routes.draw do |map|
     end
   }
   resources :access
+  resources :surveys
+  resources :gallerys
   
   root :to => "access#index"
   

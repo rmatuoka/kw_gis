@@ -1,6 +1,11 @@
 class HomeController < ApplicationController
   before_filter :check_access_code
   def index
+    if !@manager.survey
+      redirect_to surveys_path
+    else
+      redirect_to gallerys_path
+    end
     #@quarto = Hosting.first(:conditions => ['manager_id = ', @manager])
   end
   

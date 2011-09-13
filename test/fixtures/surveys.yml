@@ -1,0 +1,7 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  agendamento_do_evento: 1
+
+two:
+  agendamento_do_evento: 1

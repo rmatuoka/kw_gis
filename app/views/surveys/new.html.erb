@@ -1,0 +1,358 @@
+<%content_for :head do%>
+	<%= javascript_include_tag "jquery" %>
+	
+	<script>
+		$(document).ready(function(){
+			
+		});
+		
+		
+		function Next(x)
+		{
+			$("#Perguntas1").hide();
+			$("#Perguntas2").hide();
+			$("#Perguntas3").hide();
+			
+			$("#Perguntas" + x).show();
+		}
+	</script>
+<%end%>
+
+<div id="MainBox">
+	<div id="Salute">
+		Bem Vindo <%=@manager.nickname%>_
+	</div>
+	
+	<div id="Box" class="Survey">
+		<%form_for @survey do |f|%>
+		<h1><%=image_tag("tit_survey.gif")%></h1>
+		
+		<div id="Perguntas1" style="display:inline;">
+			<div id="Box" class="Passagem" style="margin:0px !important;">
+					<h2>Pré Evento</h2>
+					<p>
+						Como você avalia o evento nos seguintes itens:<br>
+						<b style="color:red;">ATENÇÃO: TODOS OS ITENS SÃO OBRIGATÓRIOS!</b>
+					</p>
+					<br>
+
+					<label>Agendamento do evento</label><br>
+					<%=f.radio_button :agendamento_do_evento, :value => 1%> 1
+					<%=f.radio_button :agendamento_do_evento, :value => 2%> 2
+					<%=f.radio_button :agendamento_do_evento, :value => 3%> 3
+					<%=f.radio_button :agendamento_do_evento, :value => 4%> 4
+					<%=f.radio_button :agendamento_do_evento, :value => 5%> 5
+
+					<br><br>
+
+					<label>Informações sobre o evento</label><br>
+					<%=f.radio_button :informacoes_sobre_o_evento, :value => 1%> 1
+					<%=f.radio_button :informacoes_sobre_o_evento, :value => 2%> 2
+					<%=f.radio_button :informacoes_sobre_o_evento, :value => 3%> 3
+					<%=f.radio_button :informacoes_sobre_o_evento, :value => 4%> 4
+					<%=f.radio_button :informacoes_sobre_o_evento, :value => 5%> 5
+
+					<br><br>
+
+					<label>Hot-site</label><br>
+					<%=f.radio_button :hotsite, :value => 1%> 1
+					<%=f.radio_button :hotsite, :value => 2%> 2
+					<%=f.radio_button :hotsite, :value => 3%> 3
+					<%=f.radio_button :hotsite, :value => 4%> 4
+					<%=f.radio_button :hotsite, :value => 5%> 5
+
+					<br><br>
+
+					<label>Sistema de acesso de dados pessoais no hot-site</label><br>
+					<%=f.radio_button :sistema_de_acesso_de_dados_pessoais_no_hotsite, :value => 1%> 1
+					<%=f.radio_button :sistema_de_acesso_de_dados_pessoais_no_hotsite, :value => 2%> 2
+					<%=f.radio_button :sistema_de_acesso_de_dados_pessoais_no_hotsite, :value => 3%> 3
+					<%=f.radio_button :sistema_de_acesso_de_dados_pessoais_no_hotsite, :value => 4%> 4
+					<%=f.radio_button :sistema_de_acesso_de_dados_pessoais_no_hotsite, :value => 5%> 5
+
+					<br><br>
+
+					<label>Transporte (voos e transfers)</label><br>
+					<%=f.radio_button :transporte, :value => 1%> 1
+					<%=f.radio_button :transporte, :value => 2%> 2
+					<%=f.radio_button :transporte, :value => 3%> 3
+					<%=f.radio_button :transporte, :value => 4%> 4
+					<%=f.radio_button :transporte, :value => 5%> 5
+
+					<br><br>
+
+					<label>Suporte telefônico</label><br>
+					<%=f.radio_button :suporte_telefonico, :value => 1%> 1
+					<%=f.radio_button :suporte_telefonico, :value => 2%> 2
+					<%=f.radio_button :suporte_telefonico, :value => 3%> 3
+					<%=f.radio_button :suporte_telefonico, :value => 4%> 4
+					<%=f.radio_button :suporte_telefonico, :value => 5%> 5
+
+					<br><br>
+
+					<label>Acompanhamento telefônico (RSVP)</label><br>
+					<%=f.radio_button :acompanhamento_telefonico, :value => 1%> 1
+					<%=f.radio_button :acompanhamento_telefonico, :value => 2%> 2
+					<%=f.radio_button :acompanhamento_telefonico, :value => 3%> 3
+					<%=f.radio_button :acompanhamento_telefonico, :value => 4%> 4
+					<%=f.radio_button :acompanhamento_telefonico, :value => 5%> 5
+			</div>
+
+			<div id="Box" class="Hospedagem" style="margin:0px !important;">
+				<label>Reserva de quartos (divisão de companheiros de quarto)</label><br>
+				<%=f.radio_button :reserva_de_quarto, :value => 1%> 1
+				<%=f.radio_button :reserva_de_quarto, :value => 2%> 2
+				<%=f.radio_button :reserva_de_quarto, :value => 3%> 3
+				<%=f.radio_button :reserva_de_quarto, :value => 4%> 4
+				<%=f.radio_button :reserva_de_quarto, :value => 5%> 5
+
+				<br><br>
+
+				<label>Existe algum item relativo ao pré-evento que não tenha sido considerado nesta avaliação e que gostaria de comentar?</label><br>
+				<%=f.text_area :dissertativa1, :style => "width:100%; height:70px;"%>
+
+				<br><br>
+				
+				<%=link_to(image_tag("bt_prox.gif"), "javascript:Next(2);")%>
+			</div>
+		</div>
+		
+		<div id="Perguntas2" style="display:none;">
+			<div id="Box" class="Passagem" style="margin:0px !important;">
+					<h2>Evento</h2>
+					<p>Como você avalia o evento nos seguintes itens:</p>
+					<br>
+					
+					<h3>Confraternização (24/08)</h3>
+					<label>Jantar</label><br>
+					<%=f.radio_button :jantar, :value => 1%> 1
+					<%=f.radio_button :jantar, :value => 2%> 2
+					<%=f.radio_button :jantar, :value => 3%> 3
+					<%=f.radio_button :jantar, :value => 4%> 4
+					<%=f.radio_button :jantar, :value => 5%> 5
+
+					<br><br>
+					
+					<label>Bebidas</label><br>
+					<%=f.radio_button :bebidas, :value => 1%> 1
+					<%=f.radio_button :bebidas, :value => 2%> 2
+					<%=f.radio_button :bebidas, :value => 3%> 3
+					<%=f.radio_button :bebidas, :value => 4%> 4
+					<%=f.radio_button :bebidas, :value => 5%> 5
+
+					<br><br>
+					
+					<label>Música</label><br>
+					<%=f.radio_button :musica, :value => 1%> 1
+					<%=f.radio_button :musica, :value => 2%> 2
+					<%=f.radio_button :musica, :value => 3%> 3
+					<%=f.radio_button :musica, :value => 4%> 4
+					<%=f.radio_button :musica, :value => 5%> 5
+
+					<br><br>
+					
+					<label>DJ</label><br>
+					<%=f.radio_button :dj, :value => 1%> 1
+					<%=f.radio_button :dj, :value => 2%> 2
+					<%=f.radio_button :dj, :value => 3%> 3
+					<%=f.radio_button :dj, :value => 4%> 4
+					<%=f.radio_button :dj, :value => 5%> 5
+
+					<br><br>
+					
+					<h3>Hospedagem (hotel e quartos)</h3>
+					<label>Café da Manhã</label><br>
+					<%=f.radio_button :cafe_da_manha, :value => 1%> 1
+					<%=f.radio_button :cafe_da_manha, :value => 2%> 2
+					<%=f.radio_button :cafe_da_manha, :value => 3%> 3
+					<%=f.radio_button :cafe_da_manha, :value => 4%> 4
+					<%=f.radio_button :cafe_da_manha, :value => 5%> 5
+
+					<br><br>
+					
+					<label>Almoço</label><br>
+					<%=f.radio_button :almoco, :value => 1%> 1
+					<%=f.radio_button :almoco, :value => 2%> 2
+					<%=f.radio_button :almoco, :value => 3%> 3
+					<%=f.radio_button :almoco, :value => 4%> 4
+					<%=f.radio_button :almoco, :value => 5%> 5
+
+					<br><br>
+			</div>
+
+			<div id="Box" class="Hospedagem" style="margin:0px !important;">
+				<h3>Brindes</h3>
+				<label>Necessaire</label><br>
+				<%=f.radio_button :necessaire, :value => 1%> 1
+				<%=f.radio_button :necessaire, :value => 2%> 2
+				<%=f.radio_button :necessaire, :value => 3%> 3
+				<%=f.radio_button :necessaire, :value => 4%> 4
+				<%=f.radio_button :necessaire, :value => 5%> 5
+
+				<br><br>
+				
+				<label>Caneca</label><br>
+				<%=f.radio_button :caneca, :value => 1%> 1
+				<%=f.radio_button :caneca, :value => 2%> 2
+				<%=f.radio_button :caneca, :value => 3%> 3
+				<%=f.radio_button :caneca, :value => 4%> 4
+				<%=f.radio_button :caneca, :value => 5%> 5
+
+				<br><br>
+				
+				<label>Copo volt (fluorescente)</label><br>
+				<%=f.radio_button :copo_volt, :value => 1%> 1
+				<%=f.radio_button :copo_volt, :value => 2%> 2
+				<%=f.radio_button :copo_volt, :value => 3%> 3
+				<%=f.radio_button :copo_volt, :value => 4%> 4
+				<%=f.radio_button :copo_volt, :value => 5%> 5
+
+				<br><br>
+				
+				<label>Camiseta</label><br>
+				<%=f.radio_button :camiseta, :value => 1%> 1
+				<%=f.radio_button :camiseta, :value => 2%> 2
+				<%=f.radio_button :camiseta, :value => 3%> 3
+				<%=f.radio_button :camiseta, :value => 4%> 4
+				<%=f.radio_button :camiseta, :value => 5%> 5
+
+				<br><br>
+				
+				<label>Fotografia com moldura</label><br>
+				<%=f.radio_button :fotografia_com_moldura, :value => 1%> 1
+				<%=f.radio_button :fotografia_com_moldura, :value => 2%> 2
+				<%=f.radio_button :fotografia_com_moldura, :value => 3%> 3
+				<%=f.radio_button :fotografia_com_moldura, :value => 4%> 4
+				<%=f.radio_button :fotografia_com_moldura, :value => 5%> 5
+
+				<br><br>
+				
+				<h3>Programação (horários)</h3>
+				<label>Apresentação Carol</label><br>
+				<%=f.radio_button :apresentacao_carol, :value => 1%> 1
+				<%=f.radio_button :apresentacao_carol, :value => 2%> 2
+				<%=f.radio_button :apresentacao_carol, :value => 3%> 3
+				<%=f.radio_button :apresentacao_carol, :value => 4%> 4
+				<%=f.radio_button :apresentacao_carol, :value => 5%> 5
+
+				<br><br>
+				
+				<label>Treinamento Neogrid</label><br>
+				<%=f.radio_button :treinamento_neogrid, :value => 1%> 1
+				<%=f.radio_button :treinamento_neogrid, :value => 2%> 2
+				<%=f.radio_button :treinamento_neogrid, :value => 3%> 3
+				<%=f.radio_button :treinamento_neogrid, :value => 4%> 4
+				<%=f.radio_button :treinamento_neogrid, :value => 5%> 5
+
+				<br><br>
+				
+				<%=link_to(image_tag("bt_ant.gif"), "javascript:Next(1);", :style => "float:left;")%>
+				<%=link_to(image_tag("bt_prox.gif"), "javascript:Next(3);", :style => "float:right;")%>
+			</div>
+		</div>
+		
+		<div id="Perguntas3" style="display:none;">
+			<div id="Box" class="Passagem" style="margin:0px !important;">
+				
+				<label>Treinamento Neogrid</label><br>
+				<%=f.radio_button :treinamento_neogrid, :value => 1%> 1
+				<%=f.radio_button :treinamento_neogrid, :value => 2%> 2
+				<%=f.radio_button :treinamento_neogrid, :value => 3%> 3
+				<%=f.radio_button :treinamento_neogrid, :value => 4%> 4
+				<%=f.radio_button :treinamento_neogrid, :value => 5%> 5
+
+				<br><br>
+				
+				<label>Entrega de troféus</label><br>
+				<%=f.radio_button :entrega_de_trofeus, :value => 1%> 1
+				<%=f.radio_button :entrega_de_trofeus, :value => 2%> 2
+				<%=f.radio_button :entrega_de_trofeus, :value => 3%> 3
+				<%=f.radio_button :entrega_de_trofeus, :value => 4%> 4
+				<%=f.radio_button :entrega_de_trofeus, :value => 5%> 5
+
+				<br><br>
+				
+				<label>Identidade visual do evento</label><br>
+				<%=f.radio_button :identidade_visual_do_evento, :value => 1%> 1
+				<%=f.radio_button :identidade_visual_do_evento, :value => 2%> 2
+				<%=f.radio_button :identidade_visual_do_evento, :value => 3%> 3
+				<%=f.radio_button :identidade_visual_do_evento, :value => 4%> 4
+				<%=f.radio_button :identidade_visual_do_evento, :value => 5%> 5
+
+				<br><br>
+				
+				<label>Troféu</label><br>
+				<%=f.radio_button :trofeu, :value => 1%> 1
+				<%=f.radio_button :trofeu, :value => 2%> 2
+				<%=f.radio_button :trofeu, :value => 3%> 3
+				<%=f.radio_button :trofeu, :value => 4%> 4
+				<%=f.radio_button :trofeu, :value => 5%> 5
+
+				<br><br>
+				
+				<label>Banners de auditório</label><br>
+				<%=f.radio_button :banners_de_auditorio, :value => 1%> 1
+				<%=f.radio_button :banners_de_auditorio, :value => 2%> 2
+				<%=f.radio_button :banners_de_auditorio, :value => 3%> 3
+				<%=f.radio_button :banners_de_auditorio, :value => 4%> 4
+				<%=f.radio_button :banners_de_auditorio, :value => 5%> 5
+
+				<br><br>
+				
+				<h3>Crachás</h3>
+				<label>Lista de contatos no verso</label><br>
+				<%=f.radio_button :lista_de_contatos_no_verso, :value => 1%> 1
+				<%=f.radio_button :lista_de_contatos_no_verso, :value => 2%> 2
+				<%=f.radio_button :lista_de_contatos_no_verso, :value => 3%> 3
+				<%=f.radio_button :lista_de_contatos_no_verso, :value => 4%> 4
+				<%=f.radio_button :lista_de_contatos_no_verso, :value => 5%> 5
+
+				<br><br>
+				
+				<label>Número do quarto no verso</label><br>
+				<%=f.radio_button :numero_de_quarto_no_verso, :value => 1%> 1
+				<%=f.radio_button :numero_de_quarto_no_verso, :value => 2%> 2
+				<%=f.radio_button :numero_de_quarto_no_verso, :value => 3%> 3
+				<%=f.radio_button :numero_de_quarto_no_verso, :value => 4%> 4
+				<%=f.radio_button :numero_de_quarto_no_verso, :value => 5%> 5
+
+				<br><br>
+				
+				<label>Cores de identificação de região</label><br>
+				<%=f.radio_button :cores_de_identificacao_de_regiao, :value => 1%> 1
+				<%=f.radio_button :cores_de_identificacao_de_regiao, :value => 2%> 2
+				<%=f.radio_button :cores_de_identificacao_de_regiao, :value => 3%> 3
+				<%=f.radio_button :cores_de_identificacao_de_regiao, :value => 4%> 4
+				<%=f.radio_button :cores_de_identificacao_de_regiao, :value => 5%> 5
+
+				<br><br>
+			</div>
+
+			<div id="Box" class="Hospedagem" style="margin:0px !important;">
+				
+				
+				<label>Existe algum item relativo ao evento que não tenha sido considerado nesta avaliação e que gostaria de comentar?</label><br>
+				<%=f.text_area :dissertativa2, :style => "width:100%; height:50px;"%>
+				
+				<br><br>
+				
+				<label>Em linhas gerais, como você avaliaria o 1º Encontro dos Gestores de Informação?</label><br>
+				<%=f.text_area :dissertativa3, :style => "width:100%; height:50px;"%>
+				
+				<br><br>
+				
+				<label>Existe alguma observação ou comentário adicional referente ao evento?</label><br>
+				<%=f.text_area :dissertativa4, :style => "width:100%; height:50px;"%>
+				
+				<br><br>
+				
+				<%=link_to(image_tag("bt_ant.gif"), "javascript:Next(1);", :style => "float:left;")%>
+				<%=image_submit_tag("bt_finalizar.gif")%>
+			</div>
+		</div>
+		
+		<%end%>
+	</div> 
+	
+	<div class="clear"></div>
+</div>

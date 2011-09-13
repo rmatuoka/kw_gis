@@ -1,0 +1,28 @@
+<%content_for :head do%>
+	<%= javascript_include_tag :defaults %>
+	<%= stylesheet_link_tag 'lightbox' %>
+<%end%>
+<div id="MainBox">
+	<div id="Salute">
+		Bem Vindo <%=@manager.nickname%>_
+	</div>
+	
+	<div id="Box" class="Survey">
+		<h1><%=image_tag("tit_galeria.gif")%></h1>
+		<p>Para solicitar uma foto em alta definição, envie um e-mail para <a href="mailto:suporte@gestoresdeinformacao.com.br">suporte@gestoresdeinformacao.com.br</a> com o código que está na legenda da foto.</p><br><br>
+		
+		<div id="name" style="width:100%; height:670px; overflow:auto;">
+			<%Dir.foreach("./public/images/galeria/72dpi/fotos") { |x| %> 
+				<%= lightbox_image_tag("galeria/72dpi/thumbs/" + x, "/images/galeria/72dpi/fotos/" + x, {:class=>"images"}, :title => x)  if !File.directory?(x)%>
+
+				<!-- puts x if File.directory?(x)
+				puts x -->
+			 <%}%>
+		</div>
+		
+	</div> 
+	
+	<div class="clear"></div>
+</div>
+
+
