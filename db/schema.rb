@@ -39,8 +39,8 @@ ActiveRecord::Schema.define(:version => 20110912210713) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "access"
-    t.integer  "number_of_access", :default => 0
-    t.integer  "print",            :default => 0
+    t.integer  "number_of_access"
+    t.integer  "print"
     t.text     "warning"
     t.boolean  "survey",           :default => false
   end

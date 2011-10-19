@@ -7,7 +7,6 @@ img
 	margin:0px;
 	padding:0px;
 }
-
 body
 {
 	background-image:url('/images/bg_all.jpg');
@@ -15,9 +14,17 @@ body
 	background-repeat:no-repeat;
 	text-align:center;
 }
+#div{
+           
+         width:300px;
+         height:300px;
+         margin:0 auto;
+         background:url(imagem.png);
+         _background:none;
+         _filter:
+progid:DXImageTransform.Microsoft.AlphaImageLoader(src='imagem.png', sizingMethod='scale');
 
-
-
+}
 #TopBar
 {
 	width:100%;
@@ -96,6 +103,7 @@ body
 		
 			#General #Content #MainBox #Box
 			{
+				position:relative;
 				margin-top:30px;
 				width:400px;
 				min-height:350px;
@@ -208,6 +216,7 @@ body
 			width:450px;
 			height:65px;
 			margin-top:154px;
+			*margin-top:163px;
 			margin-left:20px;
 			text-align:left;
 			font-family:Tahoma;

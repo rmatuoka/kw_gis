@@ -96,9 +96,12 @@
 					<%=f.radio_button :acompanhamento_telefonico, "3"%> 3
 					<%=f.radio_button :acompanhamento_telefonico, "4"%> 4
 					<%=f.radio_button :acompanhamento_telefonico, "5"%> 5
+					
+					<br><br>
 			</div>
 
 			<div id="Box" class="Hospedagem" style="margin:0px !important;">
+			<p style="*position:relative; *top:-377px;*margin-bottom:-200px;">
 				<label>Reserva de quartos (divisão de companheiros de quarto)</label><br>
 				<%=f.radio_button :reserva_de_quarto, "1"%> 1
 				<%=f.radio_button :reserva_de_quarto, "2"%> 2
@@ -114,6 +117,7 @@
 				<br><br>
 				
 				<%=link_to(image_tag("bt_prox.gif"), "javascript:Next(2);")%>
+			</p>	
 			</div>
 		</div>
 		
@@ -329,7 +333,7 @@
 			</div>
 
 			<div id="Box" class="Hospedagem" style="margin:0px !important;">
-				
+			<p style="*position:relative; *top:-377px;*margin-bottom:-377px;">	
 				
 				<label>Existe algum item relativo ao evento que não tenha sido considerado nesta avaliação e que gostaria de comentar?</label><br>
 				<%=f.text_area :dissertativa2, :style => "width:100%; height:50px;"%>
@@ -346,8 +350,9 @@
 				
 				<br><br>
 				
-				<%=link_to(image_tag("bt_ant.gif"), "javascript:Next(1);", :style => "float:left;")%>
-				<%=image_submit_tag("bt_finalizar.gif")%>
+				<%=link_to(image_tag("bt_ant.gif"), "javascript:Next(1);", :style => "float:left;*float:none;")%>
+				<%=image_submit_tag("bt_finalizar.gif",:style => "*position:relative;*top:-35px;*left:200px;")%>
+			</p>	
 			</div>
 		</div>
 		
